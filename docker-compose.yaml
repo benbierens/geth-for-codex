@@ -1,0 +1,10 @@
+services:
+  geth-for-codex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8545:8545
+    environment:
+      - GETH_ARGS=--qwerty
+      - GENESIS_JSON=base64here
