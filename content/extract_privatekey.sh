@@ -1,10 +1,8 @@
 echo "Extracting private key..."
 
-mkdir extract
-cp *.js extract
-cd extract
+unzip -qq extract.zip
 
-npm install web3
+cd extract
 node extract_privatekey.js
 
 echo "Done!"
