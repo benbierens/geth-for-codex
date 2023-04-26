@@ -1,8 +1,6 @@
 echo "Extracting private key..."
 
-unzip -qq extract.zip
-
 cd extract
-node extract_privatekey.js
+node extract_privatekey.js $1 $2
 
-echo "Done!"
+echo "Done: "$2
