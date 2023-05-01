@@ -6,7 +6,7 @@ if [ -n "$IS_BOOTSTRAP" ]; then
     ACCOUNTSTR="68554188b8dcb8fb51fe35301cb0dc985e8ae8d6"
     echo "0x"$ACCOUNTSTR > account_string.txt
     BOOTSTRAP_ARGS="--mine --miner.etherbase 0x$ACCOUNTSTR"
-    sh extract_privatekey.sh
+    sh extract_privatekey.sh /root/.ethereum/keystore/ /private.key
     geth --networkid 789988 --http --http.addr 0.0.0.0 --allow-insecure-unlock --http.vhosts '*' --unlock "0x$ACCOUNTSTR" --password passwordfile $BOOTSTRAP_ARGS $GETH_ARGS
     exit 0
 fi
